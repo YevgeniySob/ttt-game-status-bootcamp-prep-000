@@ -18,7 +18,8 @@ constant WIN_COMBINATIONS = [
 def won?(board)
   mark = ""
   WIN_COMBINATIONS.each do |a|
-    a.all
+    a.all do |ele|
+      ele == "X" || ele ==
       
         
   end
