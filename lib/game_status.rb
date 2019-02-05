@@ -19,8 +19,7 @@ def won?(board)
   mark = ""
   WIN_COMBINATIONS.each do |a|
     a.all do |ele|
-      ele == "X" || ele ==
-      
+      ele == "X" 
         
   end
 end
