@@ -20,7 +20,6 @@ def won?(board)
     if(win_combo.all? {|index| (position_taken?(board,index))} && win_combo.all? {|ele| board[ele] == "X"} || win_combo.all? {|ele| board[ele] == "O"})
       return win_combo
     end
-    #board[win_combo[0]] == board[win_combo[1]] == board[win_combo[2]]
   end
   return false
 end
