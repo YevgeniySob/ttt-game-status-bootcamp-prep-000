@@ -27,7 +27,7 @@ end
 board = ["X", " ", "X", " ", "X", " ", "O", "O", " "]
 
 def full(board)
-  board.any? {|ele| ele == " "}
+  board.none? {|ele| ele == " "}
 end
 
 puts full(board)
