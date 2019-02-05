@@ -15,10 +15,18 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+
+WINNER = ""
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
-    if(win_combo.all? {|index| (position_taken?(board,index))} && win_combo.all? {|ele| board[ele] == "X"} || win_combo.all? {|ele| board[ele] == "O"})
-      return win_combo
+    if(win_combo.all? {|index| (position_taken?(board,index))} 
+      elsif(win_combo.all? {|ele| board[ele] == "X"})
+        WINNER = "X"
+        return win_combo
+      elsif(win_combo.all? {|ele| board[ele] == "O"})
+        WINNER = "O"
+        return win_combo
+      end
     end
   end
   return false
