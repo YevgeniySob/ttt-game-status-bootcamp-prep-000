@@ -20,6 +20,7 @@ def won?(board)
   WIN_COMBINATIONS.each do |a|
     a.all do |ele|
       ele == "X" 
+    end
         
   end
 end
