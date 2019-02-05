@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
-    if(win_combo.all? {|index| (position_taken?(board,index))} && win_combo.all? {|ele| board[ele] == "X" || win_combo.all? {|ele| board[ele] == "O")}
+    if(win_combo.all? {|index| (position_taken?(board,index))} && win_combo.all? {|ele| board[ele] == "X"} || win_combo.all? {|ele| board[ele] == "O"})
       return a
     else
       return false
