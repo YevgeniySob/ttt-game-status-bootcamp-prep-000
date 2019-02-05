@@ -20,7 +20,7 @@ winner = ""
 def won?(board)
   WIN_COMBINATIONS.each do |win_combo|
     if(win_combo.all? {|index| (position_taken?(board,index))} 
-      elsif(win_combo.all? {|ele| board[ele] == "X"})
+      if(win_combo.all? {|ele| board[ele] == "X"})
         winner = "X"
         return win_combo
       elsif(win_combo.all? {|ele| board[ele] == "O"})
