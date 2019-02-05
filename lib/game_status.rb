@@ -24,10 +24,6 @@ def won?(board)
   return false
 end
 
-board = ["X", " ", "X", " ", "X", " ", "O", "O", " "]
-#board = ["X", "O", "X", "O", "X", "X", "O", "X", "O"]
 def full(board)
   board.none? {|ele| ele == " "}
 end
-
-puts full(board)
