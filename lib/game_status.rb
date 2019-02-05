@@ -24,6 +24,10 @@ def won?(board)
   return false
 end
 
+board = ["X", " ", "X", " ", "X", " ", "O", "O", " "]
+
 def full(board)
   board.any? {|ele| ele != " "}
 end
+
+full(board)
