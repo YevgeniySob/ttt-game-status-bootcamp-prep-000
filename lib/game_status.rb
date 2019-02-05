@@ -54,12 +54,6 @@ def winner(board)
   if(draw?(board))
     return nil
   else
-    WIN_COMBINATIONS.each do |win_combo|
-      if(win_combo.all? {|ele| board[ele] == "X"})
-        return "X"
-      else
-        return "O"
-      end
-    end
+    return WINNER
   end
 end
