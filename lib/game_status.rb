@@ -16,8 +16,9 @@ constant WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  mark = ""
   WIN_COMBINATIONS.each do |a|
     a.each do |index|
-      if(board[index])
+      if(board[index] )
   end
 end
