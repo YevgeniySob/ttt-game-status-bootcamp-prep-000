@@ -16,11 +16,12 @@ constant WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  mark = ""
   WIN_COMBINATIONS.each do |a|
     a.all do |ele|
-      ele == "X" 
+      board[ele] == "X" 
     end
-        
+    a.all do |ele2|
+      board[ele2] == "O"
+    end
   end
 end
