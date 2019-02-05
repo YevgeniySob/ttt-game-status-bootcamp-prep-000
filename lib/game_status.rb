@@ -30,4 +30,4 @@ def full(board)
   board.any? {|ele| ele != " "}
 end
 
-full(board)
+puts full(board)
