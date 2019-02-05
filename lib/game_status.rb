@@ -51,15 +51,8 @@ def over?(board)
 end
 
 def winner(board)
-  WIN_COMBINATIONS.each do |win_combo|
-    if(win_combo.all? {|index| (position_taken?(board,index))})
-      if(win_combo.all? {|ele| board[ele] == "X"})
-        winner = "X"
-        return win_combo
-      elsif(win_combo.all? {|ele| board[ele] == "O"})
-        winner = "O"
-        return win_combo
-      end
-    end
-  end
+  if(won?(board))
+    return winner
+  else
+    return nil
 end
