@@ -17,10 +17,12 @@ constant WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.each do |a|
-    a.all do {|ele| board[ele] == "X" }
-    
-    a.all do |ele2|
-      board[ele2] == "O"
+    if(a.all? {|ele| board[ele] == "X" })
+      return true
+    elsif(a.all? {|ele2| board[ele2] == "O"})
+      return true
+    else
+      return false
     end
   end
 end
