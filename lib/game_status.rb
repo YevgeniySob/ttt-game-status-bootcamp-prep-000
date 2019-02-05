@@ -55,4 +55,5 @@ def winner(board)
     return winner
   else
     return nil
+  end
 end
